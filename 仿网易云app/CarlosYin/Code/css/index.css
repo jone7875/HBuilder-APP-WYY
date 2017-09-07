@@ -1,0 +1,6 @@
+.welcome{
+	background-image: url(../../Resources/welcome.png);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
