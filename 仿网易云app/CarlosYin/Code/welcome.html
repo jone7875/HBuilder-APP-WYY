@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
-    <script src="../../js/mui.min.js"></script>
-    <link href="../../css/mui.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/CalosYinMain.css" />
-    <script type="text/javascript" charset="utf-8">
-      	mui.init();
-    </script>
-</head>
-<body>
-</body>
 
-	<div class="ub ub-ver ub-fv ub-fh">
-		<div class="ub ub-fh bc-base" style="height: 70%;"></div>
-		<div class="ub ub-fh bc-base2 ub-f1"></div>
-	</div>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../Lib/swiper.css" />
+		<link rel="stylesheet" href="css/CalosYinMain.css" />
+		<link rel="stylesheet" href="css/welcome.css" />
 
-	<script type="text/javascript" src="../Lib/jstween.min.js" ></script>
+		<style>
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.swiper-container-v {
+				background: #eee;
+			}
+		</style>
+	</head>
 
+	<body>
+		<div class="ub ub-ver ub-fv ub-fh">
+			<!--<div class="ub ub-fh bc-base" style="height: 70%;"></div>
+		<div class="ub ub-fh bc-base2 ub-f1">
+			<button id='go' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">消提示框</button>
+		</div>-->
+			<div class="swiper-container swiper-container-h">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">Horizontal Slide 1</div>
+					<div class="swiper-slide">
+						<div class="swiper-container swiper-container-v">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">Vertical Slide 1</div>
+								<div class="swiper-slide">Vertical Slide 2</div>
+								<div class="swiper-slide">Vertical Slide 3</div>
+								<div class="swiper-slide">Vertical Slide 4</div>
+								<div class="swiper-slide">Vertical Slide 5</div>
+							</div>
+							<div class="swiper-pagination swiper-pagination-v"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">Horizontal Slide 3</div>
+					<div class="swiper-slide">Horizontal Slide 4</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-h"></div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/welcome.js"></script>
+	<script type="text/javascript" src="../Lib/swiper.min.js"></script>
 	<script>
-
-		
-		
 	</script>
+
 </html>
