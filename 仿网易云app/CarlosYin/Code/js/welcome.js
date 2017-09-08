@@ -10,18 +10,19 @@
 			paginationClickable: true,
 			spaceBetween: 50
 		});
-		var swiperV = new Swiper('.swiper-container-v', {
-			pagination: '.swiper-pagination-v',
-			paginationClickable: true,
-			direction: 'vertical',
-			spaceBetween: 50
-		});
 
 	}
 
-	//	document.getElementById("go").addEventListener('tap', function() {
-	//		var indexPage = plus.webview.getLaunchWebview();
-	//		mui.fire(indexPage, 'welcomeClose');
-	//	});
+	document.querySelector(".btn-login").addEventListener('tap', function() {
+//		var indexPage = plus.webview.getLaunchWebview();
+//		mui.fire(indexPage, 'welcomeClose');
+		clicked('login.html',false,false);
+
+	});
+
+	document.querySelector(".btn-welcome").addEventListener('tap', function() {
+		var indexPage = plus.webview.getLaunchWebview();
+		mui.fire(indexPage, 'welcomeClose');
+	});
 
 })();

@@ -4,6 +4,7 @@
 	src: url('../../Resources/PingFang Regular.ttf');
 }
 *{
+	color: #FFFFFF;
 	font-family: pf-regular;
 }
 html,body{
