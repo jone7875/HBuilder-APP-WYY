@@ -128,6 +128,8 @@
 			}, false);
 		}
 		adjust = true;
+		//设置顶部状态栏前景色为白色  dark 为黑色
+		plus.navigator.setStatusBarStyle('light');
 	};
 	w.compatibleConfirm = function() {
 		plus.nativeUI.confirm('本OS原生层面不提供该控件，需使用mui框架实现类似效果。请点击“确定”下载Hello mui示例', function(e) {
