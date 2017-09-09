@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="css/welcome.css" />
 
 		<style>
-			
+
 		</style>
 	</head>
 
@@ -24,7 +24,7 @@
 		</div>-->
 			<div class="swiper-container swiper-container-h">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper1-bg"></div>
+					<div class="swiper-slide swiper1-bg">123</div>
 					<div class="swiper-slide swiper2-bg">
 						<div class="ub ub-fh ub-pc" style="margin-bottom: 30px;">
 							<div class="ub ub-pc ub-ac btn-w-h btn-login">登录/注册</div>
@@ -39,9 +39,16 @@
 	</body>
 
 	<script type="text/javascript" src="js/base.js"></script>
-	<script type="text/javascript" src="js/welcome.js"></script>
 	<script type="text/javascript" src="../Lib/swiper.min.js"></script>
-	<script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var mySwiper = new Swiper('.swiper-container-h', {
+				loop: true,
+				// 如果需要分页器
+				pagination: '.swiper-pagination-h',
+
+			})
+		}
 	</script>
 
 </html>
