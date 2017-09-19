@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../Lib/swiper.css" />
+		<link rel="stylesheet" href="css/CalosYinMain.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav bc-base">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">首页2</h1>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-right"></a>
+		</header>
+
+		<div class="mui-content">
+			<!--发现音乐页面内容-->
+			<div id="discovery" class="mui-control-content mui-active">
+				<!--音乐、视频、电台-->
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-negative" style="font-weight: bold;">
+						<a class="mui-control-item mui-active" href="#discovery_muice">音乐</a>
+						<a class="mui-control-item" href="#discovery_video">视频</a>
+						<a class="mui-control-item" href="#discovery_radio">电台</a>
+					</div>
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4 "></div>
+					<div class="mui-slider-group">
+						<div id="discovery_muice" class="mui-slider-item mui-control-content mui-active">
+							<div class="ub ub-fh ub-pc ub-ac sider1-discover-panel">
+								<div class="ub ub-img sider1-discover_icn_bg ub-pc ub-ac">
+									<div class="ub ub-img sider1-discover_icn"></div>
+								</div>
+								<div class="ub ft12">首页内容根据你的口味生成</div>
+							</div>
+							<div id="discovery_muice_scroll" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="ub ub-ver" style="z-index: 1;background-color: #FFFFFF;">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="../Resources/cm2_discover_banner_cn@3x.jpg" />
+													<div class="ss-pagination ss-pag-bc ft12">广告</div>
+												</div>
+												<div class="swiper-slide">
+													<img src="../Resources/cm2_discover_banner_jp@3x.jpg" />
+													<div class="ss-pagination ss-pag-bc1 ft12">推荐音乐</div>
+												</div>
+												<div class="swiper-slide">
+													<img src="../Resources/cm2_discover_banner_kr@3x.jpg" />
+													<div class="ss-pagination ss-pag-bc2 ft12">推销</div>
+												</div>
+											</div>
+
+											<div class="swiper-pagination"></div>
+										</div>
+										<div class="ub btns-group">
+											<div class="ub ub-f1 ub-pc">
+												<div class="ub ub-ac ub-ver">
+													<div class="ub ub-pc ub-ac ub-img disc-topbtn-bg">
+														<div class="ub ub-img disc-topbtn-adrio"></div>
+													</div>
+													<div class="ub ft12">私人FM</div>
+												</div>
+											</div>
+											<div class="ub ub-f1 ub-pc">
+												<div class="ub ub-ac ub-ver">
+													<div class="ub ub-img disc-topbtn-bg">
+														<div class="ub ub-ac ub-pc c-base ft12 ub-img disc-topbtn-daily"></div>
+													</div>
+													<div class="ub ft12">每日推荐</div>
+												</div>
+											</div>
+											<div class="ub ub-f1 ub-pc">
+												<div class="ub ub-ac ub-ver">
+													<div class="ub ub-img disc-topbtn-bg">
+														<div class="ub ub-img disc-topbtn-list"></div>
+													</div>
+													<div class="ub ft12">歌单</div>
+												</div>
+											</div>
+											<div class="ub ub-f1 ub-pc">
+												<div class="ub ub-ac ub-ver">
+													<div class="ub ub-img disc-topbtn-bg">
+														<div class="ub ub-img disc-topbtn-rank"></div>
+													</div>
+													<div class="ub ft12">排行榜</div>
+												</div>
+											</div>
+										</div>
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">最新音乐</span>
+											<div class="ub-img icon"></div>
+										</div>
+										<div class="ub ub-ver discovery_newmuic_list">
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/1.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+											</div>
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<div class="ub ub-img payhot"></div>
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐3</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+														<div class="ub ft12 introduction">推荐合口味的新歌</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">精选专栏</span>
+											<div class="ub-img icon"></div>
+										</div>
+										<div class="ub ub-ver discovery_column_list br-t">
+											<div class="ub discovery_column_item brc-base">
+												<div class="ub ub-f1">
+													<div class="ub ub-ver text">
+														<span class="ub ft14 c_title"><span class="ub-ac ub-pc type">专栏</span>《银魂》：“有天然卷的家伙都不是坏人啊魂淡！”</span>
+														<div class="ub ft12 read">阅读<span class="ft12 num">3961</span></div>
+													</div>
+												</div>
+												<div class="ub showimg">
+													<img data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+												</div>
+											</div>
+											<div class="ub discovery_column_item brc-base">
+												<div class="ub ub-f1">
+													<div class="ub ub-ver text">
+														<span class="ub ft14 c_title"><span class="ub-ac ub-pc type">专栏</span>《银魂》：“有天然卷的家伙都不是坏人啊魂淡！”</span>
+														<div class="ub ft12 read">阅读<span class="ft12 num">3961</span></div>
+													</div>
+												</div>
+												<div class="ub showimg">
+													<img data-lazyload="http://www.dcloud.io/hellomui/images/3.jpg" />
+												</div>
+											</div>
+											<div class="ub discovery_column_item brc-base">
+												<div class="ub ub-f1">
+													<div class="ub ub-ver text">
+														<span class="ub ft14 c_title"><span class="ub-ac ub-pc type">专栏</span>《银魂》：“有天然卷的家伙都不是坏人啊魂淡！”</span>
+														<div class="ub ft12 read">阅读<span class="ft12 num">3961</span></div>
+													</div>
+												</div>
+												<div class="ub showimg">
+													<img data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+												</div>
+											</div>
+										</div>
+
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">独家放送</span>
+											<div class="ub-img icon"></div>
+										</div>
+
+										<div class="ub ub-ver discovery_serve_list">
+											<div class="ub discovery_serve_row">
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/3.jpg" />
+														</div>
+														<div class="ub ft12 title">《MC厂长》中国季首发视频，跟熬厂长区游戏里冒险吧</div>
+													</div>
+												</div>
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														</div>
+														<div class="ub ft12 title">畅享音悦时刻 爆款二级7折限时抢</div>
+													</div>
+												</div>
+											</div>
+											<div class="ub discovery_serve_row">
+												<div class="ub ub-f1 discovery_serve_item_big">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/5.jpg" />
+														</div>
+														<div class="ub ft12 title">《七里香》动情翻唱，带你回味那份秋刀鱼的滋味</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">推荐歌单</span>
+											<div class="ub-img icon"></div>
+										</div>
+										<div class="ub ub-ver discovery_newmuic_list">
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/1.jpg" />
+														<div class="ub ft12 title">Deep House | 深邃律动下的迷人...</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+											</div>
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/1.jpg" />
+														<div class="ub ft12 title">Deep House | 深邃律动下的迷人...</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">推荐MV</span>
+											<div class="ub-img icon"></div>
+										</div>
+
+										<div class="ub ub-ver discovery_serve_list">
+											<div class="ub discovery_serve_row">
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/3.jpg" />
+														</div>
+														<div class="ub ft12 title">One More Light</div>
+														<div class="ub ft12 author">Linkin Park</div>
+													</div>
+												</div>
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														</div>
+														<div class="ub ft12 title">One More Light</div>
+														<div class="ub ft12 author">Linkin Park</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="ub discovery_serve_row">
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/3.jpg" />
+														</div>
+														<div class="ub ft12 title">One More Light</div>
+														<div class="ub ft12 author">Linkin Park</div>
+													</div>
+												</div>
+												<div class="ub discovery_serve_item">
+													<div class="ub ub-ver">
+														<div class="ub">
+															<img data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														</div>
+														<div class="ub ft12 title">One More Light</div>
+														<div class="ub ft12 author">Linkin Park</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="ub ub-ac discovery_title">
+											<div class="bc-base u"></div>
+											<span class="title">主播电台</span>
+											<div class="ub-img icon"></div>
+										</div>
+										<div class="ub ub-ver discovery_newmuic_list">
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+														<div class="ub ft12 title">影响你未来的100次心里谈话</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/1.jpg" />
+														<div class="ub ft12 title">Deep House | 深邃律动下的迷人...</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+											</div>
+											<div class="ub discovery_newmuic_row">
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/2.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/1.jpg" />
+														<div class="ub ft12 title">Deep House | 深邃律动下的迷人...</div>
+													</div>
+												</div>
+												<div class="ub discovery_newmuic_item">
+													<div class="ub ub-ver">
+														<img class="ub ub-img1" data-lazyload="http://www.dcloud.io/hellomui/images/4.jpg" />
+														<div class="ub ft12 title">新歌推荐</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+										<div class="ub" style="margin-bottom: 50px;">&nbsp;</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="discovery_video" class="mui-slider-item mui-control-content">
+							<div id="item2wrapper" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+
+									<ul>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+										<li>1</li>
+									</ul>
+								</div>
+
+							</div>
+
+						</div>
+						<div id="discovery_radio" class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="mui-loading">
+										<div class="mui-spinner">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="mymusic" class="mui-control-content">
+				<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个消息列表</div>
+
+			</div>
+			<div id="friend" class="mui-control-content">
+				<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-cell">
+							<div class="oa-contact-cell mui-table">
+								<div class="oa-contact-avatar mui-table-cell">
+								</div>
+								<div class="oa-contact-content mui-table-cell">
+									<div class="mui-clearfix">
+										<h4 class="oa-contact-name">叶文洁</h4>
+										<span class="oa-contact-position mui-h6">董事长</span>
+									</div>
+									<p class="oa-contact-email mui-h6">
+										yewenjie@sina.com
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<div id="account" class="mui-control-content">
+				<div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							新消息通知
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							隐私
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							通用
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<!--底部菜单-->
+		<nav class="mui-bar mui-bar-tab mui-bar-bg">
+			<a class="mui-tab-item mui-active" href="#discovery">
+				<span class="mui-icon ub-img mui-icon-discovery"></span>
+				<span class="mui-tab-label ft12">发现音乐</span>
+			</a>
+			<a class="mui-tab-item" href="#mymusic">
+				<!--<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>-->
+				<span class="mui-icon ub-img mui-icon-music"></span>
+				<span class="mui-tab-label">我的音乐</span>
+			</a>
+			<a class="mui-tab-item" href="#friend">
+				<span class="mui-icon ub-img mui-icon-friend"></span>
+				<span class="mui-tab-label">朋 友</span>
+			</a>
+			<a class="mui-tab-item" href="#account">
+				<span class="mui-icon ub-img mui-icon-account"></span>
+				<span class="mui-tab-label">账 号</span>
+			</a>
+		</nav>
+	</body>
+
+	<script type="text/javascript" src="../Lib/jstween.min.js"></script>
+	<script type="text/javascript" src="../Lib/swiper.min.js"></script>
+	<script type="text/javascript" src="../Lib/mui.lazyload.js"></script>
+	<script type="text/javascript" src="../Lib/mui.lazyload.img.js"></script>
+
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+	<script>
+	</script>
+
+</html>

@@ -1,69 +1,115 @@
-(function(w) {
-	var wv_welcome; //欢迎页webview对象
-	
-	
-	PageOnload();
-	
-	
+(function($) {
+	//阻尼系数
+	var deceleration = mui.os.ios ? 0.003 : 0.0009;
 
-	function PageOnload() {
-		//如果本地缓存表示用户第一次使用 打开欢迎页
-		if(true) {
-			openWelcome();
-		} else {
-			//如果未注册 打开登录页
-			if(true) {
+	$('.mui-scroll-wrapper').scroll({
+		deceleration: deceleration //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	});
+	$('.mui-control-content').scroll({
+		deceleration: deceleration //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	});
 
-			} else {
-				initIndex();
+	var _height = document.body.clientHeight - 65;
+	document.body.querySelector('#discovery').style.height = _height + 'px';
+	console.log(_height);
+
+	var _date = new Date();
+	document.body.querySelector('.disc-topbtn-daily').innerHTML = _date.getDate();
+
+	$(document).imageLazyload({
+		placeholder: '../Resources/cm2_blk_facemask@3x.png'
+	});
+
+	$.ready(function() {
+		$.init({
+			pullRefresh: {
+				container: '#item2wrapper',
+				down: {
+					contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+					contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+					contentrefresh: "正在刷新...",
+					callback: pulldownRefresh
+				},
+				up: {
+					contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+					contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+					contentrefresh: "正在刷新...",
+					callback: pullupRefresh
+				}
 			}
+		});
+
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				//				var table = document.body.querySelector('.mui-table-view');
+				//				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				//				for(var i = cells.length, len = i + 3; i < len; i++) {
+				//					var li = document.createElement('li');
+				//					li.className = 'mui-table-view-cell';
+				//					li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+				//					//下拉刷新，新纪录插到最前面；
+				//					table.insertBefore(li, table.firstChild); 
+				//				}
+				mui('#item2wrapper').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
 		}
-	}
-	
-	
-	//打开欢迎页
-	function openWelcome() {
-		wv_welcome = plus.webview.create('CarlosYin/Code/welcome.html');
-		var wv_this = plus.webview.currentWebview();
-		wv_this.append(wv_welcome);
-		wv_welcome.addEventListener('loaded', function() { //页面加载完成后才显示
-			wv_welcome.show();
-		}, false);
-	}
-
-	//首页动画效果
-	function initIndex() {
-		setTimeout(function() {
-			JT.fromTo(".welcome", 0.5, {
-				opacity: 1,
-				scale: 1,
-				delay: 1
-			}, {
-				opacity: 0,
-				scale: 0.5,
-				onEnd: fun_end
-			});
-			JT.fromTo(".div-main", 0.5, {
-				opacity: 0,
-				scale: 1.5,
-				delay: 1
-			}, {
-				opacity: 1,
-				scale: 1
-			});
-		}, 1000);
-
-		function fun_end() {
-			var div_wel = document.querySelector('.welcome');
-			div_wel.remove();
-			console.log('fun_end_suc');
+		var count = 0;
+		/**
+		 * 上拉加载具体业务实现
+		 */
+		function pullupRefresh() {
+			setTimeout(function() {
+				mui('#item2wrapper').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.mui-table-view');
+				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				for(var i = cells.length, len = i + 5; i < len; i++) {
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+					table.appendChild(li);
+				}
+			}, 1500);
 		}
-	}
 
-	//关闭欢迎页的回调
-	window.addEventListener('welcomeClose', function(event) {
-		wv_welcome.close('slide-out-left');
-		initIndex();
-	}, false);
+		//		var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+		//		var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+		//		var item2 = document.getElementById('item2mobile');
+		//		var item3 = document.getElementById('item3mobile');
+		document.getElementById('slider').addEventListener('slide', function(e) {
+			console.log(e.detail.slideNumber);
+			//			if(e.detail.slideNumber === 1) {
+			//				if(item2.querySelector('.mui-loading')) {
+			//					setTimeout(function() {
+			//						item2.querySelector('.mui-scroll').innerHTML = html2;
+			//					}, 500);
+			//				}
+			//			} else if(e.detail.slideNumber === 2) {
+			//				if(item3.querySelector('.mui-loading')) {
+			//					setTimeout(function() {
+			//						item3.querySelector('.mui-scroll').innerHTML = html3;
+			//					}, 500);
+			//				}
+			//			}
+		});
 
-})(window);
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			slidesPerView: 1,
+			paginationClickable: true,
+			loop: true,
+			centeredSlides: true,
+			autoplay: 2500,
+			autoplayDisableOnInteraction: false
+		});
+
+		var title = document.querySelector("#title");
+		//选项卡点击事件
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			//更换标题
+			title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+		});
+	});
+})(mui);

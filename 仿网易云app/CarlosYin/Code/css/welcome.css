@@ -7,17 +7,7 @@ body {
 	background: #FFFFFF;
 }
 
-.swiper-pagination-bullet {
-	width: 8px;
-	height: 8px;
-	display: inline-block;
-	border-radius: 100%;
-	background: #000;
-	opacity: 0.2;
-}
-
 .swiper-pagination-bullet-active {
-	background-color: #cd3230;
 	opacity: 1;
 }
 
@@ -50,17 +40,15 @@ body {
 .btn-w-h {
 	width: 140px;
 	height: 36px;
-	border: 1px solid #cd3230;
+	border: 1px solid;
 	border-radius: 18px;
 }
 
 .btn-login {
 	color: #FFFFFF;
-	background-color: #cd3230;
 }
 
 .btn-welcome {
-	color: #cd3230;
 	margin-left: 25px;
 }
 
@@ -84,4 +72,12 @@ body {
 	width: 0px;
 	height: 0px;
 	position: absolute;
+}
+
+.welcome{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url(../../Resources/LaunchImage-800-Portrait-736h@3x.png);
+	z-index: 1;
 }

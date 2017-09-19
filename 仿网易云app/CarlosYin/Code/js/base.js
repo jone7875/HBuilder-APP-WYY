@@ -55,7 +55,7 @@
 	 * @param {boolean} ns : 是否不自动显示
 	 * @param {JSON} ws : Webview窗口属性
 	 */
-	w.clicked = function(id, wa, ns, ws) {
+	w.clicked = function(id, wa, ns, ws,mas) {
 		if(openw) { //避免多次打开同一个页面
 			return null;
 		}
@@ -68,7 +68,10 @@
 			openw = plus.webview.create(pre + id, id, ws);
 			ns || openw.addEventListener('loaded', function() { //页面加载完成后才显示
 				//		setTimeout(function(){//延后显示可避免低端机上动画时白屏
-				openw.show(as);
+				if(mas)
+					openw.show(mas);
+				else
+					openw.show(as);
 				closeWaiting();
 				//		},200);
 			}, false);
